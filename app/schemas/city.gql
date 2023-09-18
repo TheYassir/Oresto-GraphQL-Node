@@ -1,0 +1,22 @@
+"une ville"
+type City {
+    id: Int!
+    name: String!@cacheControl(maxAge: 10)
+    postal_code: String!
+    restaurants: [Restaurant!]!
+    weather: Weather
+    created_at: String!
+    updated_at: String
+}
+
+input CityAddInput {
+    name: String!
+    postal_code: String!
+    geopos: String!
+}
+
+input CityUpdateInput {
+    name: String
+    postal_code: String
+    geopos: String
+}

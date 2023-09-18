@@ -1,0 +1,28 @@
+"Un restaurant"
+type Restaurant {
+    id: Int!
+    name: String!
+    city: City!
+    manager: Manager!
+    description: String!
+    terrace: Boolean!
+    restaurantHasCookingStyles: [RestaurantHasCookingStyle!]!
+    created_at: String!
+    updated_at: String
+}
+
+input RestaurantAddInput {
+    name: String!
+    description: String!
+    terrace: Boolean!
+    manager_id: Int!
+    city_id: Int!
+}
+
+input RestaurantUpdateInput {
+    name: String
+    description: String
+    terrace: Boolean
+    manager_id: Int
+    city_id: Int
+}

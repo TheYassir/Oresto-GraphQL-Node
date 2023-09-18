@@ -1,0 +1,19 @@
+@endpoint = http://localhost:4000
+
+### Get All Cities
+POST {{endpoint}}
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query ($cityId: Int!){
+  cities {
+    id
+  }
+  city(id: $cityId) {
+    id
+  }
+}
+
+{
+    "cityId": 1
+}

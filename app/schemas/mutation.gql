@@ -1,0 +1,21 @@
+type Mutation {
+
+    addRestaurant(input: RestaurantAddInput!): Restaurant
+    updateRestaurant(id: Int!, input: RestaurantUpdateInput!): Restaurant
+    deleteRestaurant(id: Int!): Boolean!
+
+    addCity(input: CityAddInput!): City
+    updateCity(id: Int!, input: CityUpdateInput!): City
+    deleteCity(id: Int!): Boolean!
+
+    addCookingStyle(input: CookingStyleAddInput!): CookingStyle
+    updateCookingStyle(id: Int!, input: CookingStyleUpdateInput!): CookingStyle
+    deleteCookingStyle(id: Int!): Boolean!
+
+    addRestaurantHasCookingStyles(restaurant_id: Int!, input: RestaurantHasCookingStylesAddInput!): Restaurant
+    deleteRestaurantHasCookingStyles(restaurant_id: Int!, cooking_style_ids: [Int!]!): Restaurant
+
+    #subscribe(input: SubscribeInput!): Subscribe
+    #login(input: LoginInput!): Login
+
+}

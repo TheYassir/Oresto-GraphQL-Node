@@ -1,0 +1,12 @@
+type RestaurantHasCookingStyle {
+    id: Int!
+    cookingStyle: CookingStyle!
+}
+
+input RestaurantHasCookingStyleAddInput {
+    cooking_style_id: Int!
+}
+
+input RestaurantHasCookingStylesAddInput{
+    cooking_styles: [RestaurantHasCookingStyleAddInput!]!
+}

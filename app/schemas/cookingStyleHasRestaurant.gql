@@ -1,0 +1,4 @@
+type CookingStyleHasRestaurant {
+    id: Int!
+    restaurant: Restaurant!
+}

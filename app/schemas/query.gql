@@ -1,0 +1,13 @@
+type Query {
+    cities: [City!]! @cacheControl(maxAge: 20)
+    city(id: Int!): City @cacheControl(maxAge: 20)
+
+    restaurants: [Restaurant!]!
+    restaurant(id: Int!): Restaurant
+
+    #managers: [Manager!]!
+    manager(id: Int!): Manager
+
+    cookingStyles: [CookingStyle!]!
+    cookingStyle(id: Int!): CookingStyle
+}

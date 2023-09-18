@@ -1,0 +1,16 @@
+"Style de cuisine"
+type CookingStyle {
+    id: Int!
+    label: String!
+    cookingStyleHasRestaurants: [CookingStyleHasRestaurant!]!
+    created_at: String!
+    updated_at: String
+}
+
+input CookingStyleAddInput {
+    label: String!
+}
+
+input CookingStyleUpdateInput {
+    label: String!
+}

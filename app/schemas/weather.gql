@@ -1,0 +1,12 @@
+"La météo d'une semaine"
+type Weather {
+    daily: [WeatherDetail]!
+}
+
+"La météo d'une journée"
+type WeatherDetail {
+    date: String!
+    temperature_minimum: Float!
+    temperature_maximum: Float!
+    precipitation: Float!
+}
